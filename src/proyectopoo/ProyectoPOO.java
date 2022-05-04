@@ -19,7 +19,7 @@ public class ProyectoPOO {
         prueba.LeerProfesores();     
         prueba.LeerEstudiantes();     
         prueba.leerOfertaLaboral();
-        while (Opcion != 10){
+        while (Opcion != 18){
             Opcion = pruebaMenu.Menu(); 
             switch(Opcion)
             {    
@@ -39,7 +39,24 @@ public class ProyectoPOO {
                          break;
                 case 8 : prueba.mostrarOfertasLaborales(); 
                          break;
-                case 9 : prueba.GenerarReporteCurso();
+                case 9 : prueba.ModificarEstudiante();
+                         break;
+                case 10: prueba.ModificarProfesor();
+                         break;
+                case 11: prueba.ModificarCurso();
+                         break;
+                case 12: prueba.ModificarOfertaLaboral();
+                         break;
+                case 13: prueba.EliminarEstudiante();
+                         break;
+                case 14: prueba.EliminarProfesor();
+                         break;
+                case 15: prueba.EliminarCurso();
+                         break;
+                case 16: prueba.EliminarOfertaLaboral();
+                         break;
+                case 17 : prueba.GenerarReporteCurso();
+                          break;
             }
         }
     }    

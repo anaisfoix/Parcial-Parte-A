@@ -8,5 +8,4 @@ Profesores que imparten el curso:
 1) Nombre: Anais Apellido: Foix Rut: 22.234.567-1 Edad: 20 Id Profesor: 2 Mail: Anais@mail.com
 
 Alumnos del curso:
-1) Nombre: Diego Apellido: Castro Rut: 8.245.567-8 Mail: diego@mail.com
-2) Nombre: Roberto Apellido: Nunez Rut: 12.562.564-1 Mail: Roberto@mail.com
+1) Nombre: Roberto Apellido: Nunez Rut: 12.562.564-1 Mail: Roberto@mail.com

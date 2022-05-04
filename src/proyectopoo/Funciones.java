@@ -610,5 +610,105 @@ public class Funciones {
         }
         
     }
+    
+    public void ModificarEstudiante(){
+        System.out.println("Que Estudiante desea modificar:");
+        for(int i = 0; i<Estudiantes.size();i++){
+            System.out.println(i+1 + ") Estudiante: " + Estudiantes.get(i).getNombre());
+        }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        System.out.println("Ingrese nuevo nombre Estudiante");
+        Estudiantes.get(Imput).setNombre(Entrada.next());
+        System.out.println("Ingrese nuevo apellido Estudiante");
+        Estudiantes.get(Imput).setApellido(Entrada.next());
+        System.out.println("Ingrese nuevo Rut Estudiante");
+        Estudiantes.get(Imput).setRut(Entrada.next());
+        System.out.println("Ingrese nuevo Mail Estudiante");
+        Estudiantes.get(Imput).setMail(Entrada.next());
+        
+        
+    }
+    
+    public void ModificarProfesor(){
+        System.out.println("Que Profesor desea modificar:");
+        for(int i = 0; i<Profesores.size();i++){
+            System.out.println(i+1 + ") Profesor: " + Profesores.get(i).getNombre());
+        }
+    }
+    
+    public void ModificarCurso(){
+        System.out.println("Que Curso desea modificar:");
+        for(int i = 0; i<Cursos.size();i++){
+            System.out.println(i+1 + ") Curso: " + Cursos.get(i).getNombre());
+        }
+    }
+    
+    public void ModificarOfertaLaboral(){
+        System.out.println("Que Oferta Laboral desea modificar:");
+        for(int i = 0; i<OfertasLaborales.size();i++){
+            System.out.println(i+1 + ") Oferta Laboral: " + OfertasLaborales.get(i).getNombreOferta());
+        }
+    }
+    
+    public void EliminarEstudiante(){
+        System.out.println("Que Estudiante desea eliminar:");
+        for(int i = 0; i<Estudiantes.size();i++){
+            System.out.println(i+1 + ") Estudiante: " + Estudiantes.get(i).getNombre());
+        }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        if(Imput <= Estudiantes.size()){
+            Estudiantes.remove(Imput);
+            System.out.println("Eliminado Correctamente");            
+        }
+        else
+            System.out.println("Opcion no valida!!!");
+    }
+    
+    public void EliminarProfesor(){
+        System.out.println("Que Profesor desea eliminar:");
+        for(int i = 0; i<Profesores.size();i++){
+            System.out.println(i+1 + ") Profesor: " + Profesores.get(i).getNombre());
+        }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        if(Imput <= Profesores.size()){
+            Profesores.remove(Imput);
+            System.out.println("Eliminado Correctamente");            
+        }
+        else
+            System.out.println("Opcion no valida!!!");
+    }
+    
+    public void EliminarCurso(){
+        System.out.println("Que Curso desea eliminar:");
+        for(int i = 0; i<Cursos.size();i++){
+            System.out.println(i+1 + ") Curso: " + Cursos.get(i).getNombre());
+        }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        if(Imput <= Cursos.size()){
+            Cursos.remove(Imput);
+            System.out.println("Eliminado Correctamente");            
+        }
+        else
+            System.out.println("Opcion no valida!!!");
+    }
+    
+    public void EliminarOfertaLaboral(){
+        System.out.println("Que Oferta Laboral desea eliminar:");
+        for(int i = 0; i<OfertasLaborales.size();i++){
+            System.out.println(i+1 + ") Oferta Laboral: " + OfertasLaborales.get(i).getNombreOferta());
+        }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        if(Imput <= OfertasLaborales.size()){
+            OfertasLaborales.remove(Imput);
+            System.out.println("Eliminado Correctamente");            
+        }
+        else
+            System.out.println("Opcion no valida!!!");
+    }
 
 }
