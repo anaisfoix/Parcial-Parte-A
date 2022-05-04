@@ -52,7 +52,7 @@ public class Funciones {
                         break;
                     }
                     case 6: {
-                        String [] CursosX=acceso.get_csvField(linea, i).split(" ");
+                        String [] CursosX=acceso.get_csvField(linea, i).split(",");
                         for(int j=0; j<CursosX.length; j++){
                             nuevoProfesor.setCursos(CursosX[j]);
                         }                        
@@ -181,10 +181,10 @@ public class Funciones {
                         break;
                     }
                     case 4: {                        
-                        String [] ClaveCursos=acceso.get_csvField(linea, i).split(" ");
+                        String [] ClaveCursos=acceso.get_csvField(linea, i).split(",");
                         for (int j = 0; j < ClaveCursos.length; j++) {
                             for (int k = 0; k < Cursos.size(); k++) {
-                                if (Cursos.get(k).getClaveCurso().equals(ClaveCursos[j])) {                                                                        
+                                if (Cursos.get(k).getNombre().equals(ClaveCursos[j])) {                                                                        
                                     nuevoEstudiante.setArrayListCursosMatriculados(Cursos.get(k));
                                     nuevoEstudiante.setCursoMapa(Cursos.get(k));
                                 }
@@ -210,7 +210,7 @@ public class Funciones {
             System.out.print(this.Estudiantes.get(i).getRut()+" ");
             System.out.print(this.Estudiantes.get(i).getMail()+" ");
             for(int j=0; j<Estudiantes.get(i).getSizeCursosMatriculados(); j++){
-                System.out.print(this.Estudiantes.get(i).getCursosMatriculados().get(j)+" ");
+                System.out.print(this.Estudiantes.get(i).getCursosMatriculados().get(j).getNombre()+" ");
             }
             System.out.println("");
         }
@@ -551,26 +551,24 @@ public class Funciones {
             System.out.println(i + 1 + ": "  +Cursos.get(i).getNombre());
         }
         System.out.println(Cursos.size());
-        Opcion = Entrada.nextInt();
-        if(Opcion - 1 > Cursos.size() ){
+        Opcion = Entrada.nextInt()-1;
+        if(Opcion > Cursos.size() ){
             System.out.println("Opcion Ingresada no es valida");
             return ;
         }
         try{
-            String Ruta = "./Reportes/"+Cursos.get(Opcion-1).getNombre()+".txt";
+            String Ruta = "./Reportes/"+Cursos.get(Opcion).getNombre()+".txt";
             File file = new File(Ruta);
             if (!file.exists()) {
                     file.createNewFile();
             }
-            PrintWriter printWriter = new PrintWriter("./Reportes/"+Cursos.get(Opcion-1).getNombre()+".txt");
-            
+            PrintWriter printWriter = new PrintWriter("./Reportes/"+Cursos.get(Opcion).getNombre()+".txt");
             printWriter.println("Nombre del Curso: " + Cursos.get(Opcion).getNombre());
             printWriter.println("Categoria del Curso: " + Cursos.get(Opcion).getCategoria());
             printWriter.println("Clave del Curso: " + Cursos.get(Opcion).getClaveCurso());
             printWriter.println("Fecha Inicio del Curso: " + Cursos.get(Opcion).getFechaInicio());
             printWriter.println("Fecha Termino del Curso: " + Cursos.get(Opcion).getFechaTermino());
-            int x = 1 ;
-            int y = 1 ;
+            int x = 1 , y = 1 ;
             
             printWriter.println("");
             printWriter.println("Profesores que imparten el curso:");
@@ -605,8 +603,6 @@ public class Funciones {
             }
             if(x==1)
                 printWriter.println("NO HAY ALUMNOS EN ESTE CURSO");       
-            
-            System.out.println(x + y + "aaaa");
             
             printWriter.close();
         } catch (Exception  e){

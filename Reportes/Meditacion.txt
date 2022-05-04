@@ -1,0 +1,11 @@
+Nombre del Curso: Meditacion
+Categoria del Curso: Personal
+Clave del Curso: Me1
+Fecha Inicio del Curso: 25-02-2022
+Fecha Termino del Curso: 31-03-2022
+
+Profesores que imparten el curso:
+1) Nombre: Sofi Apellido: Menzel Rut: 19.567.987-5 Edad: 21 Id Profesor: 3 Mail: Sofi@mail.com
+
+Alumnos del curso:
+NO HAY ALUMNOS EN ESTE CURSO

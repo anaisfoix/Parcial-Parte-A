@@ -1,11 +1,12 @@
-Nombre del Curso: Meditacion
-Categoria del Curso: Personal
-Clave del Curso: Me1
-Fecha Inicio del Curso: 25-02-2022
-Fecha Termino del Curso: 31-03-2022
+Nombre del Curso: Cuidado Animales
+Categoria del Curso: Animales
+Clave del Curso: CA1
+Fecha Inicio del Curso: 27-03-2022
+Fecha Termino del Curso: 31-04-2022
 
 Profesores que imparten el curso:
-1) Nombre: Sofi Apellido: Menzel Rut: 19.567.987-5 Edad: 21 Id Profesor: 3 Mail: Sofi@mail.com
+1) Nombre: Francisco Apellido: Munoz Rut: 20.242.456-2 Edad: 22 Id Profesor: 1 Mail: Fran@mail.com
 
 Alumnos del curso:
-NO HAY ALUMNOS EN ESTE CURSO
+1) Nombre: Diego Apellido: Castro Rut: 8.245.567-8 Mail: diego@mail.com
+2) Nombre: Matias Apellido: Castro Rut: 6.123.845-3 Mail: Matias@mail.com
