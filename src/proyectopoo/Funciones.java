@@ -618,16 +618,22 @@ public class Funciones {
         }
         Scanner Entrada= new Scanner(System.in);
         int Imput = Entrada.nextInt() - 1;
-        System.out.println("Ingrese nuevo nombre Estudiante");
+        String NombreCurso ;
+        System.out.println("Ingrese nuevo nombre del Estudiante");
         Estudiantes.get(Imput).setNombre(Entrada.next());
-        System.out.println("Ingrese nuevo apellido Estudiante");
+        System.out.println("Ingrese nuevo apellido del Estudiante");
         Estudiantes.get(Imput).setApellido(Entrada.next());
-        System.out.println("Ingrese nuevo Rut Estudiante");
+        System.out.println("Ingrese nuevo Rut del Estudiante");
         Estudiantes.get(Imput).setRut(Entrada.next());
-        System.out.println("Ingrese nuevo Mail Estudiante");
+        System.out.println("Ingrese nuevo Mail del Estudiante");
         Estudiantes.get(Imput).setMail(Entrada.next());
-        
-        
+        System.out.println("Ingrese Nombre del Curso");
+        NombreCurso = Entrada.next();
+        Estudiantes.get(Imput).getCursosMatriculados().clear();
+        for(int i=0;i<Cursos.size();i++){
+            if(Cursos.get(i).getNombre().equals(NombreCurso))
+                Estudiantes.get(Imput).setArrayListCursosMatriculados(Cursos.get(i));
+        }
     }
     
     public void ModificarProfesor(){
@@ -635,6 +641,22 @@ public class Funciones {
         for(int i = 0; i<Profesores.size();i++){
             System.out.println(i+1 + ") Profesor: " + Profesores.get(i).getNombre());
         }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        System.out.println("Ingrese el nuevo ID del Profesor");
+        Profesores.get(Imput).setIdProfesor(Entrada.nextInt());
+        System.out.println("Ingrese nuevo nombre del Profesor");
+        Profesores.get(Imput).setNombre(Entrada.next());
+        System.out.println("Ingrese nuevo apellido del Profesor");
+        Profesores.get(Imput).setApellido(Entrada.next());
+        System.out.println("Ingrese nuevo Rut del Profesor");
+        Profesores.get(Imput).setRut(Entrada.next());
+        System.out.println("Ingrese nueva Edad del Profesor");
+        Profesores.get(Imput).setEdad(Entrada.nextInt());
+        System.out.println("Ingrese nuevo Mail del Profesor");
+        Profesores.get(Imput).setMail(Entrada.next());
+        System.out.println("Ingrese nuevo Curso del Profesor");
+        Profesores.get(Imput).setCursos(Entrada.next());
     }
     
     public void ModificarCurso(){
@@ -642,6 +664,20 @@ public class Funciones {
         for(int i = 0; i<Cursos.size();i++){
             System.out.println(i+1 + ") Curso: " + Cursos.get(i).getNombre());
         }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        System.out.println("Ingrese nuevo nombre del Curso");
+        Cursos.get(Imput).setNombre(Entrada.next());
+        System.out.println("Ingrese nueva Clave del Curso");
+        Cursos.get(Imput).setClaveCurso(Entrada.next());
+        System.out.println("Ingrese nueva Fecha Inicio del Curso");
+        Cursos.get(Imput).setFechaInicio(Entrada.next());
+        System.out.println("Ingrese nueva Fecha Termino del Curso");
+        Cursos.get(Imput).setFechaTermino(Entrada.next());
+        System.out.println("Ingrese nueva Categoria del Curso");
+        Cursos.get(Imput).setCategoria(Entrada.next());
+        System.out.println("Ingrese el nuevo ID del Profesor del Curso");
+        Cursos.get(Imput).setIdProfesor(Entrada.nextInt());
     }
     
     public void ModificarOfertaLaboral(){
@@ -649,6 +685,16 @@ public class Funciones {
         for(int i = 0; i<OfertasLaborales.size();i++){
             System.out.println(i+1 + ") Oferta Laboral: " + OfertasLaborales.get(i).getNombreOferta());
         }
+        Scanner Entrada= new Scanner(System.in);
+        int Imput = Entrada.nextInt() - 1;
+        System.out.println("Ingrese nuevo Nombre de la Oferta Laboral");
+        OfertasLaborales.get(Imput).setNombreOferta(Entrada.next());
+        System.out.println("Ingrese nueva Categoria de la Oferta Laboral");
+        OfertasLaborales.get(Imput).setCategoria(Entrada.next());
+        System.out.println("Ingrese nuevo Sueldo de la Oferta Laboral");
+        OfertasLaborales.get(Imput).setSueldo(Entrada.nextInt());
+        System.out.println("Ingrese nuevo Requerimiento de la Oferta Laboral");
+        OfertasLaborales.get(Imput).setRequerimientos(Entrada.next());
     }
     
     public void EliminarEstudiante(){
