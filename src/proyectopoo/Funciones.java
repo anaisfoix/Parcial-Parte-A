@@ -302,6 +302,8 @@ public class Funciones {
                     Cursos.add(CursosX);
                     nuevoEstudiante.setArrayListCursosMatriculados(CursosX);
                     nuevoEstudiante.setCursoMapa(CursosX);
+                    Estudiantes.add(nuevoEstudiante);
+                    return;
                 }
             }
         }
